@@ -1,0 +1,313 @@
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url("../fonts/Montserrat-SemiBold.woff2"); }
+
+@font-face {
+  font-family: "Montserrat-Light";
+  src: url("../fonts/Montserrat-Light.woff2"); }
+
+@font-face {
+  font-family: "Montserrat-ExtraBold";
+  src: url("../fonts/Montserrat-Bold.woff2"); }
+
+@font-face {
+  font-family: "icons";
+  src: url("../fonts/fontello.woff2"); }
+
+body {
+  font-family: 'Montserrat-Light';
+  color: #3f3936; }
+
+a {
+  outline: none;
+  text-decoration: none; }
+
+h2.titulo {
+  text-transform: uppercase;
+  font-family: 'Montserrat-Bold';
+  color: #75716f;
+  text-align: center;
+  font-size: 2rem;
+  padding: 4rem 0; }
+
+button {
+  outline: none; }
+
+button:focus {
+  outline: none; }
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */ }
+
+.icon-google:before {
+  content: '\e807'; }
+
+.icon-twitter:before {
+  content: '\e808'; }
+
+.icon-facebook:before {
+  content: '\e809'; }
+
+.icon-localizador:before {
+  content: '\e80a'; }
+
+.icon-telefono:before {
+  content: '\e80b'; }
+
+.icon-horario:before {
+  content: '\e80c'; }
+
+.icon-email:before {
+  content: '\e80d'; }
+
+.info--contacto {
+  background-color: #75716f;
+  font-family: 'Montserrat-Bold'; }
+  .info--contacto a {
+    color: #ffffff;
+    text-decoration: none; }
+    .info--contacto a:hover {
+      color: #9ac322; }
+
+.portada {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/home/portada3.jpg");
+  background-position: center center;
+  background-size: cover; }
+  .portada ul li a {
+    font-size: 2rem;
+    color: #9ac322; }
+    .portada ul li a:hover {
+      color: #ffffff; }
+  .portada h1 {
+    font-family: 'Montserrat-ExtraBold';
+    color: #9ac322;
+    font-size: 3rem; }
+    @media all and (min-width: 768px) {
+      .portada h1 {
+        max-width: 570px;
+        color: #9ac322;
+        font-size: 4rem; } }
+
+section.tratamientos .tratamiento {
+  color: #3f3936;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #ededed;
+  height: 300px; }
+  section.tratamientos .tratamiento img {
+    width: 80px;
+    margin-bottom: 1rem; }
+  section.tratamientos .tratamiento h3 {
+    font-family: 'Montserrat-Bold';
+    text-align: center;
+    padding: 0.25rem 0; }
+    @media all and (max-width: 768px) {
+      section.tratamientos .tratamiento h3 {
+        color: #9ac322; } }
+  section.tratamientos .tratamiento p {
+    display: none;
+    text-align: center; }
+    @media all and (max-width: 768px) {
+      section.tratamientos .tratamiento p {
+        display: block; } }
+  section.tratamientos .tratamiento:hover h3 {
+    color: #9ac322; }
+  section.tratamientos .tratamiento:hover p {
+    display: block; }
+
+section.tratamientos .tratamiento:nth-of-type(odd) {
+  background-color: #f4f4f4; }
+
+section.nosotros p.subtitulo {
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto; }
+
+section.nosotros .image-soledad, section.nosotros .image-gustavo {
+  height: 400px;
+  background-position: center top;
+  background-size: cover; }
+  @media all and (max-width: 768px) {
+    section.nosotros .image-soledad, section.nosotros .image-gustavo {
+      height: 300px; } }
+  @media all and (max-width: 576px) {
+    section.nosotros .image-soledad, section.nosotros .image-gustavo {
+      height: 200px; } }
+
+section.nosotros .info {
+  background-color: #cbdd90;
+  height: 400px;
+  z-index: -100; }
+  @media all and (max-width: 768px) {
+    section.nosotros .info {
+      height: 300px; } }
+  @media all and (max-width: 576px) {
+    section.nosotros .info {
+      height: 200px; } }
+
+section.nosotros .image-soledad {
+  background-image: url("../img/home/soledad.jpg"); }
+  section.nosotros .image-soledad:hover .info-soledad {
+    z-index: 100;
+    right: 0; }
+
+section.nosotros .image-gustavo {
+  background-image: url("../img/home/gustavo.jpg"); }
+  section.nosotros .image-gustavo:hover .info-gustavo {
+    z-index: 100;
+    left: 0; }
+
+section.instalaciones .owl-nav {
+  display: none; }
+
+section.instalaciones .owl-dots {
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
+
+section.instalaciones .owl-theme .owl-dots .owl-dot.active span, section.instalaciones .owl-theme .owl-dots .owl-dot:hover span {
+  background: #9ac322; }
+
+section.contacto h4 {
+  text-transform: uppercase;
+  text-align: right;
+  font-family: 'Montserrat-Bold'; }
+
+section.contacto .nav {
+  background-color: #b2b2b2; }
+
+section.contacto .info-contacto {
+  background-color: #ededed; }
+
+section.contacto p {
+  color: #878787; }
+  section.contacto p a {
+    color: #878787;
+    text-decoration: none; }
+
+section.contacto .icono {
+  font-size: 1.5rem;
+  width: 50px;
+  text-align: center; }
+  @media all and (max-width: 576px) {
+    section.contacto .icono {
+      font-size: 1rem; } }
+
+section.contacto .icono-email {
+  font-size: 1rem; }
+  @media all and (max-width: 576px) {
+    section.contacto .icono-email {
+      font-size: .75rem; } }
+
+section.contacto .telefono:hover .icono, section.contacto .horario:hover .icono, section.contacto .direccion:hover .icono, section.contacto .email:hover .icono {
+  color: #9ac322; }
+
+section.contacto .telefono:hover p, section.contacto .horario:hover p, section.contacto .direccion:hover p, section.contacto .email:hover p {
+  color: #3f3936; }
+  section.contacto .telefono:hover p a, section.contacto .horario:hover p a, section.contacto .direccion:hover p a, section.contacto .email:hover p a {
+    color: #3f3936; }
+
+footer ul li a {
+  color: #ffffff;
+  font-size: 2rem; }
+  footer ul li a:hover {
+    color: #9ac322; }
+  @media all and (min-width: 768px) {
+    footer ul li a {
+      font-size: 1rem; } }
+
+footer p {
+  color: #ffffff; }
+  @media all and (min-width: 768px) {
+    footer p {
+      font-size: .75rem; } }
+
+footer a {
+  color: #ffffff; }
+  @media all and (min-width: 768px) {
+    footer a {
+      font-size: .75rem; } }
+
+.background-footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: -100; }
+  @media all and (max-width: 1100px) {
+    .background-footer {
+      bottom: 0px; } }
+
+.background-home {
+  width: 100%;
+  position: absolute;
+  bottom: -60px;
+  z-index: -100; }
+
+.background-tratamientos {
+  width: 100%;
+  position: absolute;
+  bottom: -60px;
+  z-index: -100; }
+
+.background-instalaciones {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  z-index: -100; }
+  @media all and (max-width: 1100px) {
+    .background-instalaciones {
+      bottom: 20px; } }
+  @media all and (max-width: 768px) {
+    .background-instalaciones {
+      bottom: 50px; } }
+  @media all and (max-width: 576px) {
+    .background-instalaciones {
+      bottom: 30px; } }
+
+.background-nosotros {
+  width: 100%;
+  position: absolute;
+  bottom: -20px;
+  z-index: -100; }
+  @media all and (max-width: 1100px) {
+    .background-nosotros {
+      bottom: 0px; } }
+  @media all and (max-width: 576px) {
+    .background-nosotros {
+      bottom: -20px; } }

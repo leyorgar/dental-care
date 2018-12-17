@@ -1,0 +1,180 @@
+.portada
+    width: 100%
+    height: 100vh
+    background-image: url('../img/home/portada3.jpg')
+    background-position: center center
+    background-size: cover
+    ul
+        li
+            a
+                font-size: 2rem
+                color: $color__verde
+                &:hover
+                    color: $color__blanco
+    h1
+        font-family: 'Montserrat-ExtraBold'
+        color: $color__verde
+        font-size: 3rem
+        @media all and (min-width: 768px)
+            max-width: 570px
+            color: $color__verde
+            font-size: 4rem
+
+section.tratamientos
+    .tratamiento
+        color: $color__gris-oscuro
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        background-color: $color__gris-claro
+        height: 300px
+        img
+            width: 80px
+            margin-bottom: 1rem
+        h3
+            font-family: 'Montserrat-Bold'
+            text-align: center
+            padding: 0.25rem 0 
+            @media all and (max-width: 768px)
+                color: $color__verde
+        p
+            display: none
+            text-align: center
+            @media all and (max-width: 768px)
+                display: block
+        &:hover
+            h3
+                color: $color__verde
+            p
+                display: block
+    .tratamiento:nth-of-type(odd)
+        background-color: $color__gris-blanco      
+
+section.nosotros
+    p.subtitulo
+        max-width: 800px
+        text-align: center
+        margin: 0 auto
+    .image-soledad, .image-gustavo
+        height: 400px
+        background-position: center top
+        background-size: cover
+        @media all and (max-width: 768px)
+            height: 300px
+        @media all and (max-width: 576px)
+            height: 200px
+    .info
+        background-color: $color__verde-claro
+        height: 400px   
+        z-index: -100
+        @media all and (max-width: 768px)
+            height: 300px
+        @media all and (max-width: 576px)
+            height: 200px
+    .image-soledad
+        background-image: url('../img/home/soledad.jpg')
+        &:hover
+            .info-soledad
+                z-index: 100
+                right: 0
+    .image-gustavo
+        background-image: url('../img/home/gustavo.jpg')
+        &:hover
+            .info-gustavo
+                z-index: 100
+                left: 0
+section.instalaciones
+    .owl-nav
+        display: none
+    .owl-dots
+        margin-top: 1rem
+        margin-bottom: 1rem
+    .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span
+        background: $color__verde
+section.contacto
+    h4
+        text-transform: uppercase
+        text-align: right
+        font-family: 'Montserrat-Bold'
+    .nav
+        background-color: #b2b2b2
+    .info-contacto
+        background-color: $color__gris-claro
+    p
+        color: #878787
+        a
+            color: #878787
+            text-decoration: none
+    .icono
+        font-size: 1.5rem
+        width: 50px
+        text-align: center
+        @media all and (max-width: 576px)
+            font-size: 1rem
+    .icono-email
+        font-size: 1rem
+        @media all and (max-width: 576px)
+            font-size: .75rem
+    .telefono:hover, .horario:hover, .direccion:hover, .email:hover
+        .icono
+            color: $color__verde
+        p
+            color: $color__gris-oscuro
+            a
+                color: $color__gris-oscuro
+footer
+    ul
+        li
+            a
+                color: $color__blanco
+                font-size: 2rem
+                &:hover
+                    color: $color__verde
+                @media all and (min-width: 768px)
+                    font-size: 1rem
+    p
+        color: $color__blanco
+        @media all and (min-width: 768px)
+            font-size: .75rem
+    a
+        color: $color__blanco
+        @media all and (min-width: 768px)
+            font-size: .75rem
+.background-footer
+    width: 100%
+    position: absolute
+    bottom: 0
+    z-index: -100
+    @media all and (max-width: 1100px)
+        bottom: 0px
+.background-home
+    width: 100%
+    position: absolute
+    bottom: -60px
+    z-index: -100
+.background-tratamientos
+    width: 100%
+    position: absolute
+    bottom: -60px
+    z-index: -100
+.background-instalaciones
+    width: 100%
+    position: absolute
+    bottom: 0px
+    z-index: -100
+    @media all and (max-width: 1100px)
+        bottom: 20px
+    @media all and (max-width: 768px)
+        bottom: 50px
+    @media all and (max-width: 576px)
+        bottom: 30px
+.background-nosotros
+    width: 100%
+    position: absolute
+    bottom: -20px
+    z-index: -100
+    @media all and (max-width: 1100px)
+        bottom: 0px
+    @media all and (max-width: 576px)
+        bottom: -20px
