@@ -128,6 +128,7 @@ function gebelin_audi_scripts() {
 	wp_enqueue_script( 'gebelin_audi-main', get_template_directory_uri() . '/js/main.js', array('jquery'), '1', true );
 	wp_enqueue_script( 'gebelin_audi-jquery', get_template_directory_uri() . '/js/jquery-3.3.1.min.js', array('jquery'), '1', true );
 	wp_enqueue_script( 'gebelin_audi-owlcarousel', get_template_directory_uri() . '/js/owl.carousel.min.js', array('jquery'), '1', true );
+	wp_enqueue_script( 'gebelin_audi-hover3d', get_template_directory_uri() . '/js/jquery.hover3d.min.js', array('jquery'), '1', true );
 }
 add_action( 'wp_enqueue_scripts', 'gebelin_audi_scripts' );
 

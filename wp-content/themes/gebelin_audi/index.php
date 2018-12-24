@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <main class="inicio">
 
-    <section class="portada flex flex-col lg:block justify-between">
+    <section class="portada flex flex-col lg:block justify-between" style="background-image:url(<?php echo get_the_post_thumbnail_url(); ?>)">
         <ul class="list-reset flex pt-3 justify-end pr-3">
             <li class="mx-1">
                 <a href="http://" target="_blank">
@@ -23,52 +23,31 @@
     </section>
     <div class="relative">
         <div class="background-home">
-            <img src="<?php echo get_template_directory_uri();?>/img/background/home.svg" alt="">
+            <img src="<?php get_the_post_thumbnail_url(); ?>" alt="">
         </div>
     </div>
     <section class="tratamientos py-2 md:py-20">
         <h2 class="titulo">Tratamientos</h2>
         <div class="flex flex-wrap">
-            <a href="#" class="tratamiento w-full md:w-1/2 lg:w-1/4">
-                <img src="<?php echo get_template_directory_uri();?>/img/tratamientos/ortodoncia.svg" alt="">
-                <h3>Ortodoncia</h3>
-                <p class="px-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt inventore vel aspernatur ea perferendis. Esse omnis doloribus sapiente accusantium corrupti.</p>
+
+            <?php
+            $args = array (
+                'post_type' => 'tratamientos',
+                'posts_per_page' => 8
+            );
+                      
+            $query = new WP_Query($args);
+
+            if($query->have_posts()) : while($query->have_posts()) : $query->the_post();?>
+
+            <a href="<?php echo get_the_permalink(); ?>" class="tratamiento w-full md:w-1/2 lg:w-1/4">
+                <img src="<?php echo get_field('icono'); ?>" alt="">
+                <h3><?php echo get_the_title(); ?></h3>
+                <p class="px-4"><?php echo get_the_content(); ?></p>
             </a>
-            <a href="#" class="tratamiento w-full md:w-1/2 lg:w-1/4">
-                <img src="<?php echo get_template_directory_uri();?>/img/tratamientos/implantologia.svg" alt="" style="width:40px">
-                <h3>Implantología</h3>
-                <p class="px-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt inventore vel aspernatur ea perferendis. Esse omnis doloribus sapiente accusantium corrupti.</p>
-            </a>
-            <a href="#" class="tratamiento w-full md:w-1/2 lg:w-1/4">
-                <img src="<?php echo get_template_directory_uri();?>/img/tratamientos/periodoncia.svg" alt="">
-                <h3>Periodoncia</h3>
-                <p class="px-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt inventore vel aspernatur ea perferendis. Esse omnis doloribus sapiente accusantium corrupti.</p>
-            </a>
-            <a href="#" class="tratamiento w-full md:w-1/2 lg:w-1/4">
-                <img src="<?php echo get_template_directory_uri();?>/img/tratamientos/estetica.svg" alt="">
-                <h3>Estética</h3>
-                <p class="px-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt inventore vel aspernatur ea perferendis. Esse omnis doloribus sapiente accusantium corrupti.</p>
-            </a>
-            <a href="#" class="tratamiento w-full md:w-1/2 lg:w-1/4">
-                <img src="<?php echo get_template_directory_uri();?>/img/tratamientos/protesis.svg" alt="">
-                <h3>Prótesis</h3>
-                <p class="px-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt inventore vel aspernatur ea perferendis. Esse omnis doloribus sapiente accusantium corrupti.</p>
-            </a>
-            <a href="#" class="tratamiento w-full md:w-1/2 lg:w-1/4">
-                <img src="<?php echo get_template_directory_uri();?>/img/tratamientos/odontologia-conservadora.svg" alt="">
-                <h3>Odontología conservadora</h3>
-                <p class="px-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt inventore vel aspernatur ea perferendis. Esse omnis doloribus sapiente accusantium corrupti.</p>
-            </a>
-            <a href="#" class="tratamiento w-full md:w-1/2 lg:w-1/4">
-                <img src="<?php echo get_template_directory_uri();?>/img/tratamientos/cirugia.svg" alt="">
-                <h3>Cirugía</h3>
-                <p class="px-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt inventore vel aspernatur ea perferendis. Esse omnis doloribus sapiente accusantium corrupti.</p>
-            </a>
-            <a href="#" class="tratamiento w-full md:w-1/2 lg:w-1/4">
-                <img src="" alt="">
-                <h3>ATM</h3>
-                <p class="px-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt inventore vel aspernatur ea perferendis. Esse omnis doloribus sapiente accusantium corrupti.</p>
-            </a>
+
+            <?php endwhile; endif; wp_reset_postdata(); ?>
+
         </div>
     </section>
     <div class="relative">
@@ -76,40 +55,30 @@
             <img src="<?php echo get_template_directory_uri();?>/img/background/tratamientos.svg" alt="">
         </div>
     </div>
+
+    
     <section class="instalaciones pb-2 md:pb-20 container mx-auto">
         <h2 class="titulo">Instalaciones</h2>
         <div class="instalacionescarousel owl-carousel owl-theme">
+
+            <?php $imagenes = get_field('imagenes'); 
+            
+            foreach($imagenes as $imagen) { ?>
+
             <div class="item">
-                <img src="<?php echo get_template_directory_uri();?>/img/instalaciones/1.jpg" alt="Sala de espera de la clínica">
+                <img src="<?php echo $imagen['imagen']; ?>" alt="">
             </div>
-            <div class="item">
-                <img src="<?php echo get_template_directory_uri();?>/img/instalaciones/2.jpg" alt="Consulta de la doctora Soledad Audi">
-            </div>
-            <div class="item">
-                <img src="<?php echo get_template_directory_uri();?>/img/instalaciones/3.jpg" alt="Consulta del doctor Gustavo Gebelin">
-            </div>
-            <div class="item">
-                <img src="<?php echo get_template_directory_uri();?>/img/instalaciones/4.jpg" alt="La sala de espera de la clínica">
-            </div>
-            <div class="item">
-                <img src="<?php echo get_template_directory_uri();?>/img/instalaciones/5.jpg" alt="Consulta del doctor Gustavo Gebelin">
-            </div>
-            <div class="item">
-                <img src="<?php echo get_template_directory_uri();?>/img/instalaciones/6.jpg" alt="Diplomas de los doctores">
-            </div>
-            <div class="item">
-                <img src="<?php echo get_template_directory_uri();?>/img/instalaciones/7.jpg" alt="Logotipo de la clínica.">
-            </div>
-            <div class="item">
-                <img src="<?php echo get_template_directory_uri();?>/img/instalaciones/8.jpg" alt="Luces de la clínica dental Gebelin Audi.">
-            </div>
+
+            <?php } ?>
         </div>
     </section>
+    
     <div class="relative">
         <div class="background-instalaciones">
             <img src="<?php echo get_template_directory_uri();?>/img/background/instalaciones.svg" alt="">
         </div>
     </div>
+
     <section class="nosotros container mx-auto relative pb-2 md:pb-20">
         <h2 class="titulo">Nosotros</h2>
         <p class="subtitulo px-2 pb-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ratione, nesciunt odit corporis qui explicabo rerum eos rem porro vero ipsa quo fugit, eius nulla molestiae nihil. Ut, minus excepturi.</p>

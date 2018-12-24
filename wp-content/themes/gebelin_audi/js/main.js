@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     $('.instalacionescarousel').owlCarousel({
         loop:true,
+        margin: 25,
         responsive:{
             0:{
                 items:1,
@@ -16,5 +17,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 loop:false
             }
         }
-    })
+    });
+
 });

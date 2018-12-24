@@ -46,7 +46,7 @@ button:focus {
   width: 1em;
   margin-right: .2em;
   text-align: center;
-  /* opacity: .8; */
+  /* opacity: .8 */
   /* For safety - reset parent styles, that can break glyph codes*/
   font-variant: normal;
   text-transform: none;
@@ -56,12 +56,12 @@ button:focus {
   /* remove if not needed */
   margin-left: .2em;
   /* you can be more comfortable with increased icons size */
-  /* font-size: 120%; */
+  /* font-size: 120% */
   /* Font smoothing. That was taken from TWBS */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* Uncomment for 3D effect */
-  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */ }
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3) */ }
 
 .icon-google:before {
   content: '\e807'; }
@@ -84,6 +84,22 @@ button:focus {
 .icon-email:before {
   content: '\e80d'; }
 
+::-webkit-scrollbar-track {
+  /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3)*/
+  border-radius: 0;
+  background-color: #e0e0e0; }
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #fff; }
+
+::-webkit-scrollbar:horizontal {
+  height: 0; }
+
+::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #9ac322; }
+
 .info--contacto {
   background-color: #75716f;
   font-family: 'Montserrat-Bold'; }
@@ -93,179 +109,186 @@ button:focus {
     .info--contacto a:hover {
       color: #9ac322; }
 
-.portada {
-  width: 100%;
-  height: 100vh;
-  background-image: url("../img/home/portada3.jpg");
-  background-position: center center;
-  background-size: cover; }
-  .portada ul li a {
-    font-size: 2rem;
-    color: #9ac322; }
-    .portada ul li a:hover {
-      color: #ffffff; }
-  .portada h1 {
-    font-family: 'Montserrat-ExtraBold';
-    color: #9ac322;
-    font-size: 3rem; }
-    @media all and (min-width: 768px) {
-      .portada h1 {
-        max-width: 570px;
-        color: #9ac322;
-        font-size: 4rem; } }
-
-section.tratamientos .tratamiento {
-  color: #3f3936;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: #ededed;
-  height: 300px; }
-  section.tratamientos .tratamiento img {
-    width: 80px;
-    margin-bottom: 1rem; }
-  section.tratamientos .tratamiento h3 {
-    font-family: 'Montserrat-Bold';
+main.inicio {
+  position: relative;
+  width: 85%;
+  top: 0;
+  left: 15%; }
+  main.inicio .portada {
+    width: 100%;
+    height: 100vh;
+    background-position: center center;
+    background-size: cover; }
+    main.inicio .portada ul li a {
+      font-size: 2rem;
+      color: #9ac322; }
+      main.inicio .portada ul li a:hover {
+        color: #ffffff; }
+    main.inicio .portada h1 {
+      font-family: 'Montserrat-ExtraBold';
+      color: #9ac322;
+      font-size: 3rem; }
+      @media all and (min-width: 768px) {
+        main.inicio .portada h1 {
+          max-width: 570px;
+          color: #9ac322;
+          font-size: 4rem; } }
+  main.inicio section.tratamientos .tratamiento {
+    color: #3f3936;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #ededed;
+    height: 300px;
+    -webkit-transition: .3s all;
+    -o-transition: .3s all;
+    transition: .3s all; }
+    main.inicio section.tratamientos .tratamiento img {
+      max-width: 80px;
+      height: 40px;
+      margin-bottom: 1rem; }
+    main.inicio section.tratamientos .tratamiento h3 {
+      font-family: 'Montserrat-Bold';
+      text-align: center;
+      padding: 0.25rem 0; }
+      @media all and (max-width: 768px) {
+        main.inicio section.tratamientos .tratamiento h3 {
+          color: #9ac322; } }
+    main.inicio section.tratamientos .tratamiento p {
+      height: 0;
+      opacity: 0;
+      text-align: center;
+      font-size: 15px; }
+      @media all and (max-width: 768px) {
+        main.inicio section.tratamientos .tratamiento p {
+          height: auto;
+          opacity: 1;
+          -webkit-transition: .3s all;
+          -o-transition: .3s all;
+          transition: .3s all; } }
+    main.inicio section.tratamientos .tratamiento:hover {
+      background-color: #f4f4f4; }
+    main.inicio section.tratamientos .tratamiento:hover h3 {
+      color: #9ac322;
+      -webkit-transition: .3s all;
+      -o-transition: .3s all;
+      transition: .3s all; }
+    main.inicio section.tratamientos .tratamiento:hover p {
+      height: auto;
+      opacity: 1;
+      -webkit-transition: .3s all;
+      -o-transition: .3s all;
+      transition: .3s all; }
+  main.inicio section.nosotros p.subtitulo {
+    max-width: 800px;
     text-align: center;
-    padding: 0.25rem 0; }
+    margin: 0 auto; }
+  main.inicio section.nosotros .image-soledad, main.inicio section.nosotros .image-gustavo {
+    height: 400px;
+    background-position: center top;
+    background-size: cover; }
     @media all and (max-width: 768px) {
-      section.tratamientos .tratamiento h3 {
-        color: #9ac322; } }
-  section.tratamientos .tratamiento p {
-    display: none;
+      main.inicio section.nosotros .image-soledad, main.inicio section.nosotros .image-gustavo {
+        height: 300px; } }
+    @media all and (max-width: 576px) {
+      main.inicio section.nosotros .image-soledad, main.inicio section.nosotros .image-gustavo {
+        height: 200px; } }
+  main.inicio section.nosotros .info {
+    background-color: #cbdd90;
+    height: 400px;
+    z-index: -100; }
+    @media all and (max-width: 768px) {
+      main.inicio section.nosotros .info {
+        height: 300px; } }
+    @media all and (max-width: 576px) {
+      main.inicio section.nosotros .info {
+        height: 200px; } }
+  main.inicio section.nosotros .image-soledad {
+    background-image: url("../img/home/soledad.jpg"); }
+    main.inicio section.nosotros .image-soledad:hover .info-soledad {
+      z-index: 100;
+      right: 0; }
+  main.inicio section.nosotros .image-gustavo {
+    background-image: url("../img/home/gustavo.jpg"); }
+    main.inicio section.nosotros .image-gustavo:hover .info-gustavo {
+      z-index: 100;
+      left: 0; }
+  main.inicio section.instalaciones .owl-nav {
+    display: none; }
+  main.inicio section.instalaciones .owl-dots {
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
+  main.inicio section.instalaciones .owl-theme .owl-dots .owl-dot.active span, main.inicio section.instalaciones .owl-theme .owl-dots .owl-dot:hover span {
+    background: #9ac322; }
+  main.inicio section.contacto h4 {
+    text-transform: uppercase;
+    text-align: right;
+    font-family: 'Montserrat-Bold'; }
+  main.inicio section.contacto .nav {
+    background-color: #b2b2b2; }
+  main.inicio section.contacto .info-contacto {
+    background-color: #ededed; }
+  main.inicio section.contacto p {
+    color: #878787; }
+    main.inicio section.contacto p a {
+      color: #878787;
+      text-decoration: none; }
+  main.inicio section.contacto .icono {
+    font-size: 1.5rem;
+    width: 50px;
     text-align: center; }
-    @media all and (max-width: 768px) {
-      section.tratamientos .tratamiento p {
-        display: block; } }
-  section.tratamientos .tratamiento:hover h3 {
+    @media all and (max-width: 576px) {
+      main.inicio section.contacto .icono {
+        font-size: 1rem; } }
+  main.inicio section.contacto .icono-email {
+    font-size: 1rem; }
+    @media all and (max-width: 576px) {
+      main.inicio section.contacto .icono-email {
+        font-size: .75rem; } }
+  main.inicio section.contacto .telefono:hover .icono, main.inicio section.contacto .horario:hover .icono, main.inicio section.contacto .direccion:hover .icono, main.inicio section.contacto .email:hover .icono {
     color: #9ac322; }
-  section.tratamientos .tratamiento:hover p {
-    display: block; }
-
-section.tratamientos .tratamiento:nth-of-type(odd) {
-  background-color: #f4f4f4; }
-
-section.nosotros p.subtitulo {
-  max-width: 800px;
-  text-align: center;
-  margin: 0 auto; }
-
-section.nosotros .image-soledad, section.nosotros .image-gustavo {
-  height: 400px;
-  background-position: center top;
-  background-size: cover; }
-  @media all and (max-width: 768px) {
-    section.nosotros .image-soledad, section.nosotros .image-gustavo {
-      height: 300px; } }
-  @media all and (max-width: 576px) {
-    section.nosotros .image-soledad, section.nosotros .image-gustavo {
-      height: 200px; } }
-
-section.nosotros .info {
-  background-color: #cbdd90;
-  height: 400px;
-  z-index: -100; }
-  @media all and (max-width: 768px) {
-    section.nosotros .info {
-      height: 300px; } }
-  @media all and (max-width: 576px) {
-    section.nosotros .info {
-      height: 200px; } }
-
-section.nosotros .image-soledad {
-  background-image: url("../img/home/soledad.jpg"); }
-  section.nosotros .image-soledad:hover .info-soledad {
-    z-index: 100;
-    right: 0; }
-
-section.nosotros .image-gustavo {
-  background-image: url("../img/home/gustavo.jpg"); }
-  section.nosotros .image-gustavo:hover .info-gustavo {
-    z-index: 100;
-    left: 0; }
-
-section.instalaciones .owl-nav {
-  display: none; }
-
-section.instalaciones .owl-dots {
-  margin-top: 1rem;
-  margin-bottom: 1rem; }
-
-section.instalaciones .owl-theme .owl-dots .owl-dot.active span, section.instalaciones .owl-theme .owl-dots .owl-dot:hover span {
-  background: #9ac322; }
-
-section.contacto h4 {
-  text-transform: uppercase;
-  text-align: right;
-  font-family: 'Montserrat-Bold'; }
-
-section.contacto .nav {
-  background-color: #b2b2b2; }
-
-section.contacto .info-contacto {
-  background-color: #ededed; }
-
-section.contacto p {
-  color: #878787; }
-  section.contacto p a {
-    color: #878787;
-    text-decoration: none; }
-
-section.contacto .icono {
-  font-size: 1.5rem;
-  width: 50px;
-  text-align: center; }
-  @media all and (max-width: 576px) {
-    section.contacto .icono {
-      font-size: 1rem; } }
-
-section.contacto .icono-email {
-  font-size: 1rem; }
-  @media all and (max-width: 576px) {
-    section.contacto .icono-email {
-      font-size: .75rem; } }
-
-section.contacto .telefono:hover .icono, section.contacto .horario:hover .icono, section.contacto .direccion:hover .icono, section.contacto .email:hover .icono {
-  color: #9ac322; }
-
-section.contacto .telefono:hover p, section.contacto .horario:hover p, section.contacto .direccion:hover p, section.contacto .email:hover p {
-  color: #3f3936; }
-  section.contacto .telefono:hover p a, section.contacto .horario:hover p a, section.contacto .direccion:hover p a, section.contacto .email:hover p a {
+  main.inicio section.contacto .telefono:hover p, main.inicio section.contacto .horario:hover p, main.inicio section.contacto .direccion:hover p, main.inicio section.contacto .email:hover p {
     color: #3f3936; }
+    main.inicio section.contacto .telefono:hover p a, main.inicio section.contacto .horario:hover p a, main.inicio section.contacto .direccion:hover p a, main.inicio section.contacto .email:hover p a {
+      color: #3f3936; }
 
-footer ul li a {
-  color: #ffffff;
-  font-size: 2rem; }
-  footer ul li a:hover {
-    color: #9ac322; }
-  @media all and (min-width: 768px) {
-    footer ul li a {
-      font-size: 1rem; } }
-
-footer p {
-  color: #ffffff; }
-  @media all and (min-width: 768px) {
-    footer p {
-      font-size: .75rem; } }
-
-footer a {
-  color: #ffffff; }
-  @media all and (min-width: 768px) {
-    footer a {
-      font-size: .75rem; } }
+footer {
+  position: relative;
+  width: 85%;
+  top: 0;
+  left: 15%; }
+  footer ul li a {
+    color: #ffffff;
+    font-size: 2rem; }
+    footer ul li a:hover {
+      color: #9ac322; }
+    @media all and (min-width: 768px) {
+      footer ul li a {
+        font-size: 1rem; } }
+  footer p {
+    color: #ffffff; }
+    @media all and (min-width: 768px) {
+      footer p {
+        font-size: .75rem; } }
+  footer a {
+    color: #ffffff; }
+    @media all and (min-width: 768px) {
+      footer a {
+        font-size: .75rem; } }
 
 .background-footer {
-  width: 100%;
+  width: 85%;
+  left: 15%;
   position: absolute;
   bottom: 0;
   z-index: -100; }

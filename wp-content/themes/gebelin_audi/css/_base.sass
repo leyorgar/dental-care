@@ -28,7 +28,7 @@ button:focus
   width: 1em
   margin-right: .2em
   text-align: center
-  /* opacity: .8; */
+  /* opacity: .8 */
  
   /* For safety - reset parent styles, that can break glyph codes*/
   font-variant: normal
@@ -42,14 +42,14 @@ button:focus
   margin-left: .2em
  
   /* you can be more comfortable with increased icons size */
-  /* font-size: 120%; */
+  /* font-size: 120% */
  
   /* Font smoothing. That was taken from TWBS */
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
  
   /* Uncomment for 3D effect */
-  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3) */
 
  
 .icon-google:before
@@ -66,3 +66,24 @@ button:focus
     content: '\e80c'
 .icon-email:before
     content: '\e80d'
+
+::-webkit-scrollbar-track 
+    /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3)*/
+    border-radius: 0
+    background-color: #e0e0e0
+
+::-webkit-scrollbar 
+    width: 10px
+    background-color: #fff
+    
+::-webkit-scrollbar:horizontal
+    height: 0
+
+::-webkit-scrollbar-thumb 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3)
+    background-color: $color__verde
+
+// ::-webkit-scrollbar-thumb:horizontal
+//     background: #000
+//     border-radius: 0
+
