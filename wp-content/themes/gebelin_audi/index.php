@@ -26,7 +26,7 @@
             <img src="<?php get_the_post_thumbnail_url(); ?>" alt="">
         </div>
     </div>
-    <section class="tratamientos py-2 md:py-20">
+    <section class="tratamientos py-2 md:py-20" id="tratamientos">
         <h2 class="titulo">Tratamientos</h2>
         <div class="flex flex-wrap">
 
@@ -57,7 +57,7 @@
     </div>
 
     
-    <section class="instalaciones pb-2 md:pb-20 container mx-auto">
+    <section class="instalaciones pb-2 md:pb-20 container mx-auto" id="instalaciones">
         <h2 class="titulo">Instalaciones</h2>
         <div class="instalacionescarousel owl-carousel owl-theme">
 
@@ -79,7 +79,7 @@
         </div>
     </div>
 
-    <section class="nosotros container mx-auto relative pb-2 md:pb-20">
+    <section class="nosotros container mx-auto relative pb-2 md:pb-20" id="nosotros">
         <h2 class="titulo">Nosotros</h2>
         <p class="subtitulo px-2 pb-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ratione, nesciunt odit corporis qui explicabo rerum eos rem porro vero ipsa quo fugit, eius nulla molestiae nihil. Ut, minus excepturi.</p>
         <div class="flex flex-wrap lg:hidden">
@@ -135,7 +135,9 @@
             <img src="<?php echo get_template_directory_uri();?>/img/background/nosotros.svg" alt="">
         </div>
     </div>
-    <section class="contacto container mx-auto pb-10">
+
+
+    <section class="contacto container mx-auto pb-10" id="contacto">
         <h2 class="titulo">Contacto</h2>
         <div class="flex flex-wrap">
             <div class="w-full md:w-1/2 flex flex-col justify-between p-4 info-contacto">

@@ -101,6 +101,8 @@ button:focus {
   background-color: #9ac322; }
 
 .info--contacto {
+  position: relative;
+  z-index: 1000;
   background-color: #75716f;
   font-family: 'Montserrat-Bold'; }
   .info--contacto a {
@@ -109,11 +111,213 @@ button:focus {
     .info--contacto a:hover {
       color: #9ac322; }
 
+.transparencia {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  -webkit-transition: .3s all;
+  -o-transition: .3s all;
+  transition: .3s all; }
+  .transparencia.active {
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    -webkit-transition: .3s all;
+    -o-transition: .3s all;
+    transition: .3s all; }
+
+.fijo-izq {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100vh;
+  background-color: #9ac322;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-transition: .3s all;
+  -o-transition: .3s all;
+  transition: .3s all; }
+  .fijo-izq.active {
+    -webkit-transition: .3s all;
+    -o-transition: .3s all;
+    transition: .3s all;
+    width: 250px; }
+  .fijo-izq .logo-empresa {
+    position: relative;
+    margin-top: 80px;
+    margin-left: 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .fijo-izq .logo-empresa a img {
+      width: 50px; }
+    .fijo-izq .logo-empresa .texto {
+      position: absolute;
+      left: -175px;
+      top: 0;
+      bottom: 0;
+      width: 150px;
+      -webkit-transition: .3s all;
+      -o-transition: .3s all;
+      transition: .3s all;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+      .fijo-izq .logo-empresa .texto.active {
+        left: 75px;
+        -webkit-transition: .3s all;
+        -o-transition: .3s all;
+        transition: .3s all; }
+      .fijo-izq .logo-empresa .texto p {
+        text-transform: uppercase;
+        color: #ffffff;
+        font-size: 24px;
+        font-weight: bold;
+        opacity: 0; }
+        .fijo-izq .logo-empresa .texto p.active {
+          opacity: 1; }
+  .fijo-izq .navegador a {
+    position: relative;
+    margin: 20px 0;
+    margin-left: 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    .fijo-izq .navegador a:hover svg {
+      -webkit-transition: .3s all;
+      -o-transition: .3s all;
+      transition: .3s all;
+      fill: #3f3936; }
+    .fijo-izq .navegador a:hover h2 {
+      color: #3f3936 !important;
+      -webkit-transition: .3s all;
+      -o-transition: .3s all;
+      transition: .3s all; }
+    .fijo-izq .navegador a svg {
+      max-height: 50px;
+      width: 50px;
+      -webkit-transition: .3s all;
+      -o-transition: .3s all;
+      transition: .3s all;
+      fill: #ffffff; }
+      .fijo-izq .navegador a svg.hover {
+        fill: #3f3936;
+        -webkit-transition: .3s all;
+        -o-transition: .3s all;
+        transition: .3s all; }
+    .fijo-izq .navegador a .texto {
+      position: absolute;
+      left: -175px;
+      top: 0;
+      bottom: 0;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      width: 150px;
+      -webkit-transition: .3s all;
+      -o-transition: .3s all;
+      transition: .3s all; }
+      .fijo-izq .navegador a .texto h2 {
+        text-transform: uppercase;
+        color: #ffffff;
+        margin: 0;
+        font-size: 16px;
+        opacity: 0; }
+        .fijo-izq .navegador a .texto h2.hover {
+          -webkit-transition: .3s all;
+          -o-transition: .3s all;
+          transition: .3s all;
+          color: #3f3936; }
+        .fijo-izq .navegador a .texto h2.active {
+          opacity: 1; }
+      .fijo-izq .navegador a .texto.active {
+        left: 75px;
+        -webkit-transition: .3s all;
+        -o-transition: .3s all;
+        transition: .3s all; }
+  .fijo-izq .informacion {
+    width: 100%; }
+    .fijo-izq .informacion .fondo {
+      position: relative;
+      width: 100%;
+      height: 30px;
+      background-color: #cbdd90;
+      margin-top: 10px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .fijo-izq .informacion .fondo img {
+        margin-left: 40px;
+        width: 20px;
+        height: auto; }
+      .fijo-izq .informacion .fondo .texto {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        position: absolute;
+        left: -175px;
+        top: 0;
+        bottom: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        width: 150px;
+        -webkit-transition: .3s all;
+        -o-transition: .3s all;
+        transition: .3s all; }
+        .fijo-izq .informacion .fondo .texto.active {
+          left: 100px;
+          -webkit-transition: .3s all;
+          -o-transition: .3s all;
+          transition: .3s all; }
+        .fijo-izq .informacion .fondo .texto p {
+          font-size: 11px;
+          color: #3f3936;
+          font-weight: bold;
+          opacity: 0; }
+          .fijo-izq .informacion .fondo .texto p.active {
+            opacity: 1; }
+
 main.inicio {
   position: relative;
-  width: 85%;
+  width: calc(100% - 100px);
   top: 0;
-  left: 15%; }
+  left: 100px; }
   main.inicio .portada {
     width: 100%;
     height: 100vh;
@@ -230,6 +434,20 @@ main.inicio {
     margin-bottom: 1rem; }
   main.inicio section.instalaciones .owl-theme .owl-dots .owl-dot.active span, main.inicio section.instalaciones .owl-theme .owl-dots .owl-dot:hover span {
     background: #9ac322; }
+  main.inicio section.instalaciones .owl-carousel .owl-item .item img {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+    -webkit-transition: .3s all;
+    -o-transition: .3s all;
+    transition: .3s all; }
+  main.inicio section.instalaciones .owl-carousel .owl-item.center .item img {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s all;
+    -o-transition: .3s all;
+    transition: .3s all; }
   main.inicio section.contacto h4 {
     text-transform: uppercase;
     text-align: right;
@@ -264,9 +482,9 @@ main.inicio {
 
 footer {
   position: relative;
-  width: 85%;
+  width: calc(100% - 100px);
   top: 0;
-  left: 15%; }
+  left: 100px; }
   footer ul li a {
     color: #ffffff;
     font-size: 2rem; }
@@ -287,8 +505,8 @@ footer {
         font-size: .75rem; } }
 
 .background-footer {
-  width: 85%;
-  left: 15%;
+  width: calc(100% - 100px);
+  left: 100px;
   position: absolute;
   bottom: 0;
   z-index: -100; }
