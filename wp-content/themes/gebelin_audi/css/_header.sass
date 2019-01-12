@@ -10,6 +10,7 @@
             color: $color__verde
 
 .transparencia
+    display: none
     position: fixed
     z-index: 1
     top: 0
@@ -17,12 +18,15 @@
     left: 0
     width: 100px
     transition: .3s all
+    @media all and(min-width: 1024px)
+        display: block
     &.active
         background-color: rgba(0, 0, 0, .2)
         width: 100%
         transition: .3s all
 
 .fijo-izq
+    display: none
     position: fixed
     z-index: 100
     top: 0
@@ -30,10 +34,11 @@
     width: 100px
     height: 100vh
     background-color: $color__verde
-    display: flex
     flex-direction: column
     justify-content: space-between
     transition: .3s all
+    @media all and(min-width: 1024px)
+        display: flex
     &.active
         transition: .3s all
         width: 250px
@@ -147,3 +152,85 @@
                     opacity: 0
                     &.active
                         opacity: 1
+
+
+
+.menu_responsive
+    top: 0
+    position: fixed
+    width: 100%
+    z-index: 1000
+    @media all and(min-width: 1024px)
+        display: none
+    .boton
+        position: absolute
+        top: 20px
+        left: 20px
+        height: 45px
+        width: 45px
+        background-color: $color__verde
+        border-radius: 45px
+        display: flex
+        justify-content: center
+        align-items: center
+        .item
+            width: 50%
+            height: 40%
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            span
+                width: 100%
+                height: 2px
+                border-radius: 2px
+                background-color: $color__blanco
+    .menu
+        height: 100vh
+        width: 100%
+        position: absolute
+        z-index: 1000
+        top: 0
+        left: -100vw
+        background-color: $color__verde
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        transition: .3s all
+        &.active
+            left: 0
+            transition: .3s all
+        a
+            margin: 20px 0
+            color: $color__blanco
+            text-transform: uppercase
+            font-weight: bold
+            font-size: 16px
+            @media all and(min-width: 768px)
+                font-size: 24px
+            &.active
+                color: $color__gris-oscuro
+        .btn-cancelar
+            z-index: 1100
+            position: absolute
+            top: 20px
+            right: 20px
+            width: 30px
+            height: 45px
+            display: flex
+            justify-content: center
+            align-items: center
+            .item
+                position: relative
+                width: 100%
+                height: 100%
+                span
+                    position: absolute
+                    width: 100%
+                    top: 22px
+                    height: 2px
+                    background-color: $color__blanco
+                    transform: rotate(45deg)
+                    &:nth-child(2)
+                        transform: rotate(-45deg)
+            

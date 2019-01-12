@@ -16,7 +16,7 @@
 <body <?php body_class(); ?>>
 
     <header>
-        <div class="hidden info--contacto md:flex justify-between">
+        <div class="hidden info--contacto lg:flex justify-between">
             <div class="p-3">
                 <a href="https://www.google.es/maps/place/La+Cl%C3%ADnica+Dental+Gebelin+Audi+en+Benidorm/@38.542953,-0.126639,15z/data=!4m5!3m4!1s0x0:0x7df066914c30f5a1!8m2!3d38.542953!4d-0.126639" target="_blank"><i class="icon-localizador"></i> Av. Alfonso Puchades 21, Benidorm</a>
             </div>
@@ -221,6 +221,28 @@
                     <img src="<?php echo get_template_directory_uri(); ?>/img/header/telefono.svg" alt="">
                     <div class="texto">
                         <p>+34 644 25 68 75</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu_responsive">
+            <div class="boton">
+                <div class="item">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="menu">
+                <a href="#" data-rel="tratamientos" class="logo-texto tratamientos">tratamientos</a>
+                <a href="#" data-rel="instalaciones" class="logo-texto instalaciones">instalaciones</a>
+                <a href="#" data-rel="nosotros" class="logo-texto nosotros">nosotros</a>
+                <a href="#" data-rel="contacto" class="logo-texto contacto">contacto</a>
+                <div class="btn-cancelar">
+                    <div class="item">
+                        <span></span>
+                        <span></span>
                     </div>
                 </div>
             </div>

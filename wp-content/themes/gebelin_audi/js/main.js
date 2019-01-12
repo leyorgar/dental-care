@@ -31,6 +31,14 @@ document.addEventListener('DOMContentLoaded', function () {
         $('.informacion .texto p').toggleClass('active');
     });
 
+    $('.menu_responsive .boton').click(function() {
+        $('.menu').addClass('active');
+    });
+    $('.btn-cancelar .item').click(function() {
+        $('.menu').removeClass('active');
+        console.log('hola');
+    });
+
 
 
     function posicionarElemento(elemento){
@@ -55,24 +63,38 @@ document.addEventListener('DOMContentLoaded', function () {
                 $('.navegador h2').removeClass('hover');
                 $('.navegador .tratamientos svg').addClass('hover');
                 $('.navegador .tratamientos h2').addClass('hover');
+
+                $('.menu_responsive a').removeClass('active');
+                $('.menu_responsive .tratamientos').addClass('active');
             } else if (scroll_top >= posicionarElemento('#instalaciones')[0] && scroll_top < posicionarElemento('#nosotros')[0]) {
                 $('.navegador svg').removeClass('hover');
                 $('.navegador h2').removeClass('hover');
                 $('.navegador .instalaciones svg').addClass('hover');
                 $('.navegador .instalaciones h2').addClass('hover');
+
+                $('.menu_responsive a').removeClass('active');
+                $('.menu_responsive .instalaciones').addClass('active');
             } else if (scroll_top >= posicionarElemento('#nosotros')[0] && scroll_top < posicionarElemento('#contacto')[0]) {
                 $('.navegador svg').removeClass('hover');
                 $('.navegador h2').removeClass('hover');
                 $('.navegador .nosotros svg').addClass('hover');
                 $('.navegador .nosotros h2').addClass('hover');
+
+                $('.menu_responsive a').removeClass('active');
+                $('.menu_responsive .nosotros').addClass('active');
             } else if (scroll_top >= posicionarElemento('#contacto')[0] && scroll_top < posicionarElemento('#contacto')[1]) {
                 $('.navegador svg').removeClass('hover');
                 $('.navegador h2').removeClass('hover');
                 $('.navegador .contacto svg').addClass('hover');
                 $('.navegador .contacto h2').addClass('hover');
+
+                $('.menu_responsive a').removeClass('active');
+                $('.menu_responsive .contacto').addClass('active');
             } else {
                 $('.navegador svg').removeClass('hover');
                 $('.navegador h2').removeClass('hover');
+
+                $('.menu_responsive a').removeClass('active');
             }
         });
     }
@@ -80,6 +102,15 @@ document.addEventListener('DOMContentLoaded', function () {
     $('header .fijo-izq .navegador a').on('click', function(e){
         e.preventDefault();
         selectedClass = $(this).attr('data-rel');
+        $('html, body').animate({
+            scrollTop: $("#"+selectedClass).offset().top
+        }, 1500);
+    });
+
+    $('.menu_responsive .menu a').on('click', function(e){
+        e.preventDefault();
+        selectedClass = $(this).attr('data-rel');
+        $('.menu_responsive .menu').removeClass('active');
         $('html, body').animate({
             scrollTop: $("#"+selectedClass).offset().top
         }, 1500);

@@ -1,8 +1,11 @@
 main.inicio
-    position: relative
-    width: calc(100% - 100px)
-    top: 0
-    left: 100px
+    width: 100%
+    @media all and(min-width: 1024px)
+        position: relative
+        width: calc(100% - 100px)
+        top: 0
+        left: 100px
+        
     
     
     .portada
@@ -109,12 +112,13 @@ main.inicio
         .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span
             background: $color__verde
 
-        .owl-carousel .owl-item .item img
-            transform: scale(.9)
-            transition: .3s all
-        .owl-carousel .owl-item.center .item img
-            transform: scale(1)
-            transition: .3s all
+        @media all and(min-width: 1024px)
+            .owl-carousel .owl-item .item img
+                transform: scale(.9)
+                transition: .3s all
+            .owl-carousel .owl-item.center .item img
+                transform: scale(1)
+                transition: .3s all
 
 
 
@@ -154,9 +158,10 @@ main.inicio
 
 footer
     position: relative
-    width: calc(100% - 100px)
-    top: 0
-    left: 100px
+    @media all and(min-width: 1024px)
+        width: calc(100% - 100px)
+        top: 0
+        left: 100px
     ul
         li
             a
@@ -175,13 +180,15 @@ footer
         @media all and (min-width: 768px)
             font-size: .75rem
 .background-footer
-    width: calc(100% - 100px)
-    left: 100px
+    width: 100%
     position: absolute
     bottom: 0
     z-index: -100
     @media all and (max-width: 1100px)
         bottom: 0px
+    @media all and(min-width: 1024px)
+        width: calc(100% - 100px)
+        left: 100px
 .background-home
     width: 100%
     position: absolute
